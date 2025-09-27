@@ -4,17 +4,11 @@ import pollDiscordLarge from '~/assets/pollmaker.png';
 import pollDiscord from '~/assets/pollmaker.png';
 import sliceBackgroundLarge from '~/assets/discord-background.png';
 import sliceBackground from '~/assets/discord-background.png';
-import sliceSidebarAnnotationsLarge from '~/assets/slice-sidebar-annotations-large.png';
-import sliceSidebarAnnotations from '~/assets/slice-sidebar-annotations.png';
-import sliceSidebarLayersLarge from '~/assets/slice-sidebar-layers-large.png';
-import sliceSidebarLayers from '~/assets/slice-sidebar-layers.png';
 import { Footer } from '~/components/footer';
-import { Image } from '~/components/image';
 import {
   ProjectBackground,
   ProjectContainer,
   ProjectHeader,
-  ProjectImage,
   ProjectSection,
   ProjectSectionColumns,
   ProjectSectionContent,
@@ -81,14 +75,14 @@ export const DiscordBots = () => {
           roles={roles}
         />
         <ProjectSection>
-        <ProjectSectionColumns centered className={styles.columns}>
+        <ProjectSectionColumns padding="top">
             <div className={styles.model}>
               {renderKatakana('laptop', true)}
               <Suspense fallback={<Loader center data-visible={true} />}>
                 <Model 
                   models={[{
                     ...deviceModels.laptop,
-                    position: { x: 0, y: -1.6, z: 6 },
+                    position: { x: 0, y: -.5, z: 10 },
                     animation: 'SpringUp',
                     texture: {
                       placeholder: pollDiscord,
@@ -114,7 +108,7 @@ export const DiscordBots = () => {
                 <Model 
                   models={[{
                     ...deviceModels.iphone_11,
-                    position: { x: 0, y: -1.6, z: 0 },
+                    position: { x: 0, y: 0, z: 8 },
                     animation: 'SpringUp',
                     texture: {
                       placeholder: phoneDiscord,

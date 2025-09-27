@@ -19,16 +19,14 @@
 }
 
 .armor {
-  aspect-ratio: 1 / 2;
+  aspect-ratio: 1 / 1;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 100%;
-}
-
-.armor {
-  position: relative;
-  display: grid;
   place-content: center;
+  position: relative;
+
+
 }
 
 .loader {
@@ -52,7 +50,7 @@
 }
 .model {
   --width: 180%;
-  --aspectRatio: 12 / 10;
+  --aspectRatio: 10 / 5;
 
   min-width: var(--width);
   aspect-ratio: var(--aspectRatio);

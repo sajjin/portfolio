@@ -133,7 +133,7 @@ export function ProjectSummary({
         )}
         {model.type === 'impreza' && (
           <>
-            {renderKatakana('impreza', visible)}
+            {renderKatakana('laptop', visible)}
             <div className={styles.model} data-device="impreza">
               {!modelLoaded && (
                 <Loader center className={styles.loader} data-visible={visible} />
@@ -163,7 +163,7 @@ export function ProjectSummary({
         )}
         {model.type === 'google_home' && (
           <>
-            {renderKatakana('google_home', visible)}
+            {renderKatakana('phone', visible)}
             <div className={styles.model} data-device="google_home">
               {!modelLoaded && (
                 <Loader center className={styles.loader} data-visible={visible} />
@@ -200,10 +200,10 @@ export function ProjectSummary({
             </div>
           </>
         )}
-        {model.type === 'iphone_11' && (
+        {model.type === 'phone' && (
           <>
-            {renderKatakana('iphone_11', visible)}
-            <div className={styles.model} data-device="iphone_11">
+            {renderKatakana('phone', visible)}
+            <div className={styles.model} data-device="phone">
               {!modelLoaded && (
                 <Loader center className={styles.loader} data-visible={visible} />
               )}
@@ -211,21 +211,21 @@ export function ProjectSummary({
                 <Suspense>
                   <Model
                     alt={model.alt}
-                    cameraPosition={{ x: 0, y: 0, z: 22 }}
+                    cameraPosition={{ x: 0, y: 0, z: 11.5 }}
                     showDelay={300}
                     onLoad={handleModelLoad}
                     show={visible}
                     models={[
                       {
-                        ...deviceModels.iphone_11,
-                        position: { x: -0.6, y: -1, z: 0 },
+                        ...deviceModels.phone,
+                        position: { x: -0.6, y: 1.1, z: 0 },
                         texture: {
                           ...model.textures[0],
                           sizes: phoneSizes,
                         },
                       },
                       {
-                        ...deviceModels.iphone_11,
+                        ...deviceModels.phone,
                         position: { x: 0.6, y: -0.5, z: 0.3 },
                         texture: {
                           ...model.textures[1],
