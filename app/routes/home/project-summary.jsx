@@ -101,6 +101,36 @@ export function ProjectSummary({
   function renderPreview(visible) {
     return (
       <div className={styles.preview}>
+        {model.type === 'laptop' && (
+          <>
+            {renderKatakana('laptop', visible)}
+            <div className={styles.model} data-device="laptop">
+              {!modelLoaded && (
+                <Loader center className={styles.loader} data-visible={visible} />
+              )}
+              {isHydrated && visible && (
+                <Suspense>
+                  <Model
+                    alt={model.alt}
+                    cameraPosition={{ x: 0, y: 1, z: 11 }}
+                    showDelay={700}
+                    onLoad={handleModelLoad}
+                    show={visible}
+                    models={[
+                      {
+                        ...deviceModels.laptop,
+                        texture: {
+                          ...model.textures[0],
+                          sizes: laptopSizes,
+                        },
+                      },
+                    ]}
+                  />
+                </Suspense>
+              )}
+            </div>
+          </>
+        )}
         {model.type === 'impreza' && (
           <>
             {renderKatakana('impreza', visible)}
@@ -157,6 +187,45 @@ export function ProjectSummary({
                       },
                       {
                         ...deviceModels.google_home,
+                        position: { x: 0.6, y: -0.5, z: 0.3 },
+                        texture: {
+                          ...model.textures[1],
+                          sizes: phoneSizes,
+                        },
+                      },
+                    ]}
+                  />
+                </Suspense>
+              )}
+            </div>
+          </>
+        )}
+        {model.type === 'iphone_11' && (
+          <>
+            {renderKatakana('iphone_11', visible)}
+            <div className={styles.model} data-device="iphone_11">
+              {!modelLoaded && (
+                <Loader center className={styles.loader} data-visible={visible} />
+              )}
+              {isHydrated && visible && (
+                <Suspense>
+                  <Model
+                    alt={model.alt}
+                    cameraPosition={{ x: 0, y: 0, z: 22 }}
+                    showDelay={300}
+                    onLoad={handleModelLoad}
+                    show={visible}
+                    models={[
+                      {
+                        ...deviceModels.iphone_11,
+                        position: { x: -0.6, y: -1, z: 0 },
+                        texture: {
+                          ...model.textures[0],
+                          sizes: phoneSizes,
+                        },
+                      },
+                      {
+                        ...deviceModels.iphone_11,
                         position: { x: 0.6, y: -0.5, z: 0.3 },
                         texture: {
                           ...model.textures[1],

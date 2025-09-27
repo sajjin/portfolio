@@ -17,7 +17,7 @@ export default {
 
 const modelStyle = { position: 'absolute', top: 0, right: 0, bottom: 0, left: 0 };
 
-export const Phone = () => (
+export const GoogleHome = () => (
   <StoryContainer padding={0}>
     <Model
       style={modelStyle}
@@ -45,7 +45,35 @@ export const Phone = () => (
   </StoryContainer>
 );
 
-export const Laptop = () => (
+export const Phone = () => (
+  <StoryContainer padding={0}>
+    <Model
+      style={modelStyle}
+      cameraPosition={{ x: 0, y: 0, z: 22 }}
+      alt="iphone 11 models"
+      models={[
+        {
+          ...deviceModels.iphone_11,
+          position: { x: 0, y: -1, z: 0.3 },
+          texture: {
+            srcSet: `${phoneTexture} 375w, ${phoneTextureLarge} 750w`,
+            placeholder: phoneTexturePlaceholder,
+          },
+        },
+        {
+          ...deviceModels.iphone_11,
+          position: { x: 0.6, y: -0.8, z: 0.4 },
+          texture: {
+            srcSet: `${phoneTexture2} 375w, ${phoneTexture2Large} 750w`,
+            placeholder: phoneTexture2Placeholder,
+          },
+        },
+      ]}
+    />
+  </StoryContainer>
+);
+
+export const Impreza = () => (
   <StoryContainer padding={0}>
     <Model
       style={modelStyle}
@@ -64,3 +92,25 @@ export const Laptop = () => (
     />
   </StoryContainer>
 );
+
+
+export const Laptop = () => (
+  <StoryContainer padding={0}>
+    <Model
+      style={modelStyle}
+      cameraPosition={{ x: 0, y: 1, z: 5 }}
+      alt="laptop model"
+      models={[
+        {
+          ...deviceModels.laptop,
+          position: { x: 0, y: 1, z: 5 },
+          texture: {
+            srcSet: `${laptopTexture} 800w, ${laptopTextureLarge} 1920w`,
+            placeholder: laptopTexturePlaceholder,
+          },
+        },
+      ]}
+    />
+  </StoryContainer>
+);
+

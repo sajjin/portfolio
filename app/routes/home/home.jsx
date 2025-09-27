@@ -1,6 +1,6 @@
-import sliceTextureLarge from '~/assets/slice-app-large.jpg';
+import sliceTextureLarge from '~/assets/discord-laptop.png';
 import sliceTexturePlaceholder from '~/assets/slice-app-placeholder.jpg';
-import sliceTexture from '~/assets/slice-app.jpg';
+import sliceTexture from '~/assets/discord-laptop.png';
 import sprTextureLarge from '~/assets/spr-lesson-builder-dark-large.jpg';
 import sprTexturePlaceholder from '~/assets/spr-lesson-builder-dark-placeholder.jpg';
 import sprTexture from '~/assets/spr-lesson-builder-dark.jpg';
@@ -46,11 +46,11 @@ export const Home = () => {
   const intro = useRef();
   const projectOne = useRef();
   const projectTwo = useRef();
-  // const projectThree = useRef();
+  const projectThree = useRef();
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, details];
+    const sections = [intro, projectOne, projectTwo, projectThree, details];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -124,6 +124,26 @@ export const Home = () => {
         model={{
           type: 'google_home',
           alt: 'Annotating a biomedical image in the Slice app',
+          textures: [
+            {
+              srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,
+              placeholder: sliceTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="project-3"
+        sectionRef={projectThree}
+        visible={visibleSections.includes(projectThree.current)}
+        index={3}
+        title="Discord Bots"
+        description="Python and javascript built Discord bots that can make weekly polls, play music, and have an advanced user picker."
+        buttonText="View project"
+        buttonLink="/projects/discord-bots"
+        model={{
+          type: 'laptop',
+          alt: 'Annotating a discord bot app',
           textures: [
             {
               srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,

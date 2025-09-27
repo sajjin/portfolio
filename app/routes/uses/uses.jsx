@@ -66,12 +66,7 @@ export const Uses = () => {
               <ProjectSectionText as="div">
                 <List>
                   <ListItem>
-                    I use <Link href="https://vscodium.com/">VSCodium</Link> as my text
-                    editor, with the Tokyo Night theme and Operator Mono as my typeface of
-                    choice.
-                  </ListItem>
-                  <ListItem>
-                    Firefox is my main browser for both development and general use.
+                    Brave  is my main browser for both development and general use.
                   </ListItem>
                   <ListItem>
                     <Link href="https://reactjs.org/">React</Link> is my front end
@@ -119,11 +114,11 @@ export const Uses = () => {
                   </TableRow>
                   <TableRow>
                     <TableHeadCell>Operating system</TableHeadCell>
-                    <TableCell>Arch Linux (by the way)</TableCell>
+                    <TableCell>Dual booted with windows 11 and kali linux</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableHeadCell>Browser</TableHeadCell>
-                    <TableCell>Zen Browser</TableCell>
+                    <TableCell>Brave</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableHeadCell>Monitor</TableHeadCell>
@@ -147,7 +142,7 @@ export const Uses = () => {
                   </TableRow>
                   <TableRow>
                     <TableHeadCell>Microphone</TableHeadCell>
-                    <TableCell>Blue Yeti</TableCell>
+                    <TableCell>Shure</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
