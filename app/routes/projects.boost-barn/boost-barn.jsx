@@ -1,22 +1,11 @@
 import backgroundSprLarge from '~/assets/spr-background.png';
-import backgroundSprPlaceholder from '~/assets/spr-background-placeholder.jpg';
-import imageSprBackgroundVolcanismLarge from '~/assets/spr-background-volcanism-large.jpg';
-import imageSprBackgroundVolcanismPlaceholder from '~/assets/spr-background-volcanism-placeholder.jpg';
-import imageSprBackgroundVolcanism from '~/assets/spr-background-volcanism.jpg';
 import backgroundSpr from '~/assets/imageSprLessonBuilderDark.png';
 import imageSprComponentsDarkLarge from '~/assets/imageSprComponentsLight.png';
-import imageSprComponentsDarkPlaceholder from '~/assets/spr-components-dark-placeholder.png';
 import imageSprComponentsDark from '~/assets/imageSprComponentsLight.png';
-import imageSprComponentsLightLarge from '~/assets/spr-components-light-large.png';
-import imageSprComponentsLight from '~/assets/spr-components-light.png';
-
 import imageSprLessonBuilderDarkLarge from '~/assets/spr-lesson-builder-dark-large.jpg';
-import imageSprLessonBuilderDarkPlaceholder from '~/assets/spr-lesson-builder-dark-placeholder.jpg';
 import imageSprLessonBuilderDark from '~/assets/imageSprLessonBuilderDark.png';
-import imageSprLessonBuilderLightPlaceholder from '~/assets/spr-lesson-builder-light-placeholder.jpg';
 import { Footer } from '~/components/footer';
 import { Image } from '~/components/image';
-import { Link } from '~/components/link';
 import { SegmentedControl, SegmentedControlOption } from '~/components/segmented-control';
 import { ThemeProvider, useTheme } from '~/components/theme-provider';
 import {
@@ -25,7 +14,6 @@ import {
   ProjectHeader,
   ProjectImage,
   ProjectSection,
-  ProjectSectionColumns,
   ProjectSectionContent,
   ProjectSectionHeading,
   ProjectSectionText,
@@ -69,7 +57,6 @@ export const SmartSparrow = () => {
           opacity={isDark ? 0.5 : 0.8}
           src={backgroundSpr}
           srcSet={`${backgroundSpr} 1080w, ${backgroundSprLarge} 2160w`}
-          placeholder={backgroundSprPlaceholder}
         />
         <ProjectHeader
           title={title}

@@ -2,12 +2,7 @@ import sliceAppLarge from '~/assets/personal-assistant.png';
 import sliceApp from '~/assets/personal-assistant.png';
 import sliceBackgroundLarge from '~/assets/background_personal.png';
 import sliceBackground from '~/assets/background_personal.png';
-import sliceSidebarAnnotationsLarge from '~/assets/slice-sidebar-annotations-large.png';
-import sliceSidebarAnnotations from '~/assets/slice-sidebar-annotations.png';
-import sliceSidebarLayersLarge from '~/assets/slice-sidebar-layers-large.png';
-import sliceSidebarLayers from '~/assets/slice-sidebar-layers.png';
 import { Footer } from '~/components/footer';
-import { Image } from '~/components/image';
 import {
   ProjectBackground,
   ProjectContainer,
