@@ -24,6 +24,7 @@ import { deviceModels } from '~/components/model/device-models';
 import { useTheme } from '~/components/theme-provider';
 import katakana from './katakana.svg';
 import styles from './discord-bot.module.css';
+import { useWindowSize } from '~/hooks';
 
 const title = 'Discord Bots';
 const description =
@@ -37,11 +38,23 @@ export const meta = () => {
 const Model = lazy(() => import('~/components/model').then(module => ({ default: module.Model })));
 
 export const DiscordBots = () => {
+  const { width } = useWindowSize();
   const [modelLoaded, setModelLoaded] = useState(false);
   const { theme } = useTheme();
   const svgOpacity = theme === 'light' ? 0.7 : 1;
   const phoneSizes = `(max-width: ${media.tablet}px) 30vw, 20vw`;
   const laptopSizes = `(max-width: ${media.tablet}px) 80vw, 40vw`;
+  const getResponsiveCameraPosition = () => {
+  if (width <= 480) {
+    return { x: 0, y: 0, z: 6 }; // Very close for small phones
+  } else if (width <= 768) {
+    return { x: 0, y: 0, z: 8 }; // Close for larger phones
+  } else if (width <= 1024) {
+    return { x: 0, y: 0, z: 10 }; // Closer for tablets/laptops
+  } else {
+    return { x: 0, y: 0, z: 16 }; // Your current position
+  }
+};
 
   function renderKatakana(device, visible) {
     return (
@@ -76,13 +89,13 @@ export const DiscordBots = () => {
         />
         <ProjectSection>
         <ProjectSectionColumns padding="top">
+            {renderKatakana('laptop', true)}
             <div className={styles.model}>
-              {renderKatakana('laptop', true)}
               <Suspense fallback={<Loader center data-visible={true} />}>
                 <Model 
                   models={[{
                     ...deviceModels.laptop,
-                    position: { x: 0, y: -.5, z: 10 },
+                    position: { x: 0, y: -.5, z: 7 },
                     animation: 'SpringUp',
                     texture: {
                       placeholder: pollDiscord,
@@ -92,7 +105,7 @@ export const DiscordBots = () => {
                     }
                   }]}
                   alt="3D model showing Discord bot interface"
-                  cameraPosition={{ x: 0, y: 0, z: 16 }}
+                  cameraPosition={{ x: 0, y: -0.5, z: 14 }}
                   showDelay={300}
                   onLoad={() => setModelLoaded(true)}
                   show={true}
@@ -118,7 +131,7 @@ export const DiscordBots = () => {
                     }
                   }]}
                   alt="3D model showing Discord bot interface"
-                  cameraPosition={{ x: 0, y: 0, z: 16 }}
+                  cameraPosition={{ x: 0, y: 0, z: 11.5 }}
                   showDelay={300}
                   onLoad={() => setModelLoaded(true)}
                   show={true}

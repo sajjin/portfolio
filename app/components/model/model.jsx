@@ -312,17 +312,26 @@ export const Model = ({
     if (!renderer.current || !camera.current) return;
     if (width <= 0 || height <= 0) return;
 
-    // Cancel any pending animation frame
-    if (animationFrame) {
-      cancelAnimationFrame(animationFrame);
-    }
-
-    // Schedule update for next frame
     animationFrame = requestAnimationFrame(() => {
       renderer.current.setSize(width, height);
       renderer.current.setPixelRatio(Math.min(window.devicePixelRatio, 2));
       
-      camera.current.aspect = width / height;
+      const aspectRatio = width / height;
+      camera.current.aspect = aspectRatio;
+      
+      // Adjust camera position based on aspect ratio
+      const baseZ = cameraPosition.z;
+      let adjustedZ = baseZ;
+      
+      if (aspectRatio < 1.2) {
+        // Portrait or square-ish screens - move camera back
+        adjustedZ = baseZ * 1.3;
+      } else if (aspectRatio > 1.8) {
+        // Very wide screens - move camera closer
+        adjustedZ = baseZ * 0.8;
+      }
+      
+      camera.current.position.set(cameraPosition.x, cameraPosition.y, adjustedZ);
       camera.current.updateProjectionMatrix();
 
       renderFrame();
@@ -348,7 +357,7 @@ export const Model = ({
       cancelAnimationFrame(animationFrame);
     }
   };
-}, [renderFrame]);
+}, [renderFrame, cameraPosition.x, cameraPosition.y, cameraPosition.z]);
 
   return (
     <div
