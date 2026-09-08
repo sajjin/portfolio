@@ -1,7 +1,7 @@
 import backgroundSprLarge from '~/assets/spr-background.png';
 import backgroundSpr from '~/assets/imageSprLessonBuilderDark.png';
-import imageSprComponentsDarkLarge from '~/assets/imageSprComponentsLight.png';
-import imageSprComponentsDark from '~/assets/imageSprComponentsLight.png';
+import imageSprComponentsDarkLarge from '~/assets/untitled.webm';
+import imageSprComponentsDark from '~/assets/untitled.webm';
 import imageSprLessonBuilderDarkLarge from '~/assets/spr-lesson-builder-dark-large.jpg';
 import imageSprLessonBuilderDark from '~/assets/imageSprLessonBuilderDark.png';
 import { Footer } from '~/components/footer';
@@ -83,7 +83,7 @@ export const SmartSparrow = () => {
           <ProjectTextRow>
             <ProjectSectionHeading>The problem</ProjectSectionHeading>
             <ProjectSectionText>
-              In 2019, Boost Barn Motorsports began a project to build a website to help customers find the best products for their car. The goal was to make the process of finding the best products easier and more accessible. The website was made using older technologies, such as HTML, CSS, and JavaScript. Now the Website was built using newer technologies, such as React, Redux, and Node.js.
+              In 2026, Boost Barn Motorsports began a project to build a website to help customers find the best products for their car. The goal was to make the process of finding the best products easier and more accessible. The website was made using older technologies, such as HTML, CSS, and JavaScript. Now the Website was built using newer technologies, such as React, Vue, and Node.js.
             </ProjectSectionText>
           </ProjectTextRow>
         </ProjectSection>
@@ -98,18 +98,9 @@ export const SmartSparrow = () => {
               sizes="100vw"
             />
             <ProjectTextRow>
-              <SegmentedControl
-                currentIndex={themes.indexOf(theme)}
-                onChange={handleThemeChange}
-              >
-                <SegmentedControlOption>Dark theme</SegmentedControlOption>
-                <SegmentedControlOption>Light theme</SegmentedControlOption>
-              </SegmentedControl>
-            </ProjectTextRow>
-            <ProjectTextRow>
               <ProjectSectionHeading>Components</ProjectSectionHeading>
               <ProjectSectionText>
-                The top left image above shows the region-specific pricing it works by pulling data from an API that updates the price of each product based on the value of the money in that region, the pricing is updated every hour. The top right shows a basic filter it works by looking for each year, make, model, and sub-model tag for each product that is automatically generated. 
+                The new website was built using a component-based architecture, which allowed for a more modular and maintainable codebase. This approach also allowed for a more consistent user experience across the website, as components could be reused and shared across different pages and features. 
 
               </ProjectSectionText>
             </ProjectTextRow>

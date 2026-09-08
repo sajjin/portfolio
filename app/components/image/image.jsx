@@ -211,5 +211,5 @@ const ImageElements = ({
 };
 
 function getIsVideo(src) {
-  return typeof src === 'string' && src.includes('.mp4');
+  return typeof src === 'string' && /\.(mp4|webm)(?:$|[?#])/i.test(src);
 }
