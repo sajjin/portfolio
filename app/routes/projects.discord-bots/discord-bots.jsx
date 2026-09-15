@@ -153,18 +153,17 @@ export const DiscordBots = () => {
         <ProjectSection light>
           <ProjectSectionContent>
             <ProjectTextRow>
-              <ProjectSectionHeading>Bots</ProjectSectionHeading>
+              <ProjectSectionHeading>All of my discord apps</ProjectSectionHeading>
               <ProjectSectionText>
-                I have made multiple bots for my Discord server, some of the most popular ones are:
                 <ul>
                   <li>
-                    Music Bot - A bot that plays music from YouTube and other sources.
+                    Music App - An app that plays music from YouTube and other sources into the voice channel that you are in using commands.
                   </li>
                   <li>
-                     Snack Bot - A bot that picks a random user from the server.
+                     Snack App - An app that picks a random user from the server using a somewhat complicated process with weights so it doesn't pick the same person over and over again.
                   </li>
                   <li>
-                    Utility Bot - A bot that provides various utility functions, such as reminders and polls.
+                    Utility App - An app that provides various utility functions, such as reminders and polls with a database for data collection and analysis memory messaging everyone for the winning option.
                   </li>
                   <li>
                     Video uploader - This is a discord app the allows you to bypass the base discord upload limit by being able to easily upload to YouTube or your own private server and embed the video, image or file into discord.
