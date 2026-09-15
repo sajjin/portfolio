@@ -166,6 +166,9 @@ export const DiscordBots = () => {
                   <li>
                     Utility Bot - A bot that provides various utility functions, such as reminders and polls.
                   </li>
+                  <li>
+                    Video uploader - This is a discord app the allows you to bypass the base discord upload limit by being able to easily upload to YouTube or your own private server and embed the video, image or file into discord.
+                  </li>
                 </ul>
               </ProjectSectionText>
             </ProjectTextRow>
